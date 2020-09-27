@@ -5,10 +5,10 @@ const bcrypt = require('bcryptjs');
 const auth = require('../../middleware/auth');
 const jwt = require('jsonwebtoken');
 const config = require('config');
-const { check, validationResult } = require('express-validator/check');
+const { check, validationResult } = require('express-validator');
 
 // @route   GET api/auth
-// @desc    Test Route
+// @desc    Gets user from token.
 // @access  Public
 router.get('/', auth, async (req, res) => {
   try {
